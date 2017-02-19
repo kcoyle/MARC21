@@ -1,34 +1,28 @@
 
 # MARC Indicators
 
-The indicators in MARC pose a number of problems because of the great variety of meanings and ways that they have been used. Like all of MARC, the indicators were designed to be understandable to humans but not to have the rigor required for most machine processing.
+The indicators in MARC pose a number of problems because of the great variety of meanings and ways that they have been used. Some indicators control card printing; some give provenance information; some drastically change the meaning of the field. In addition, it often isn't cleaar whether indicators address the entire field, or only certain subfields.
 
  
 ## Undefined and blank indicators
 
 Each variable field begins with two positions before the first subfield. These are known as the first and second indicators. The indicators are not always defined; in fact, in about 60% of the tags one or both indicators is not defined and is therefore always left blank in instance data. Unfortunately, in some indicators the blank is a meaningful value. This practice was recognized as problematic after a while, but some instances of this remain.
 
-Indicators are displayed in various ways in MARC displays.  MARCEdit uses backslashes for blanks in the indicator positions
+Indicators are displayed in various ways in MARC displays.  MARCEdit uses backslashes for blanks in the indicator positions:
  
-
-  =082  0\$a813/.54$219
-
+```
+  =082  0\$a813/.54$21
   =100  1\$aWallace, Carol,$d1955-
-
   =245  10$aWelcome to Mount Merry College 
-
+```
  
-
 The LC Catalog uses an underscore:
-
+```
   043 __ |a n-us---
-
   050 00 |a ZA3250.U6 |b C68 1997
-
   082 00 |a 025.04 |2 21
-
   100 1_ |a Coyle, Karen.
-
+```
 
 Instance data cannot distinguish between blank indicators and undefined indicators. This means that programs that process MARC21 records have to "know" which fields have indicators and which indicators are valid.
  
@@ -46,26 +40,25 @@ There are some indicators that are used to assign display constants to fields. T
 Some of the display indicators add semantics to the field, and will be covered in the next section. This section covers those that only indicator whether or not a MARC-defined display label will be used.
  
 Caption or label
-	tags in form: tag + subfield position (either 01 or 02)
+>	tags in form: tag + subfield position (either 01 or 02)
+
 Display constant controller
-	30701, 51601, 52201, 52401, 52601, 55601, 56501, 56701, 58101, 58601, 51601, 76002, 76202, 76502, 76702, 77002, 77202, 77302, 77402, 77502, 77602, 77702, 78602
+>	30701, 51601, 52201, 52401, 52601, 55601, 56501, 56701, 58101, 58601, 51601, 76002, 76202, 76502, 76702, 77002, 77202, 77302, 77402, 77502, 77602, 77702, 78602
+
 Note controller
-	24702, 76001, 76201, 76501, 76701, 77001, 77201, 77301, 77401, 77501, 77601, 77701, 78001, 78501, 78601, 78701, 02802
+>	24702, 76001, 76201, 76501, 76701, 77001, 77201, 77301, 77401, 77501, 77601, 77701, 78001, 78501, 78601, 78701, 02802
  
 Note/added entry controller 	02802, 24601
+
 Unform title printed or displayed 	24301, 24001
 
- 
-
-Example:
-
- 
-
+**Example:**
+```
 775 Other Edition Entry, Second Indicator
 Display constant controller
 # - Other edition available
 8 - No display constant generated
-
+```
  
 
 In a few cases it isn't clear to me what the indicators mean, for example the "File size" indicator below. I don't understand when 'file size' is used as opposed to 'case file characteristics'. It appears that 'file size' can only be used when the field has a $a subfield. If anyone knows more about the 565 and its usage, I'd like to hear about it:
