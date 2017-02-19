@@ -60,101 +60,53 @@ Display constant controller
 8 - No display constant generated
 ```
  
-
-In a few cases it isn't clear to me what the indicators mean, for example the "File size" indicator below. I don't understand when 'file size' is used as opposed to 'case file characteristics'. It appears that 'file size' can only be used when the field has a $a subfield. If anyone knows more about the 565 and its usage, I'd like to hear about it:
-
+In a few cases it isn't clear to me what the indicators mean, for example the "File size" indicator below. I don't understand when 'file size' is used as opposed to 'case file characteristics'. It appears that 'file size' can only be used when the field has a $a subfield. 
  
-
+```
 565 Case File Characteristics Note, First Indicator
 Display constant controller
 # - File size
 0 - Case file characteristics
 8 - No display constant generated
-
+```
+ ## Display constant
  
+Display constants were used when cards were produced by vendors and represented printing options for the cards and card sets. Display constants are used in ILSs based on tables, generally, and include fields that have no MARC subfield or indicator for display. (Note, some MARC fields have a $i subfield that contains a display text that precedes the contents of the field. This is another example where similar or same functionality is achieved in more than one way in MARC.)
 
-Display constants were used when cards were produced by vendors and represented printing options for the cards and card sets. These types of options are now included in online systems and I would be surprised if libraries coded them on a record-by-record basis. Display constants are used in ILSs based on tables, generally, and include fields that have no MARC subfield or indicator for display. (Note, some MARC fields have a $i subfield that contains a display text that precedes the contents of the field. This is another example where similar or same functionality is achieved in more than one way in MARC. I'll try to bring all of the "display" issues together later in my analysis.)
-
- 
-
-It also seems that display constants are not inherently 'sharable'. They appear to be decisions made on a library-by-library basis rather than on the nature of the field. In CRS it says:
-
- 
+Display constants are not inherently part of the 'sharable' aspect of the records. They appear to be decisions made on a library-by-library basis rather than on the nature of the field. In CRS it says:
 
      "The use of display constants is determined by each organization or automation system."
 
+One type of display indicator is a note controller. Note controllers are binary ("display note" "do not display note"). Display constant controller often has two choices: a display constant or no display constant.
  
 
-Note controller is binary ("display note" "do not display note"). Display constant controller often has two choices: a display constant or no display constant.
+## Trace/do not trace
 
+This is another function that is deeply linked to the card catalog. "Tracing" meant that a card would be generated with that field's data at the top above the main body of the card. Each traced card became an entry in the catalog. It is analogous to the question of whether or not certain fields should be indexed, but is not precisely equivalent since it is in some cases only pertinent to the card situation.
  
-
-My feeling is that we can ignore these in the current environment, but I will try to find out if any systems still use them. I can find evidence that they appear in LC records:
-
- 
-
-LCCN Permalink: http://lccn.loc.gov/2004062872
-
-526 0_ |a Accelerated Reader/Renaissance Learning |b LG |c 3.1 |d 0.5
-
- 
-Trace/do not trace
-
- 
-
-This is another function that seems deeply linked to the card catalog. "Tracing" meant that a card would be generated with that field's data at the top above the main body of the card. Each traced card became an entry in the catalog. It is analogous to the question of whether or not certain fields should be indexed, but is not precisely equivalent since it is in some cases only pertinent to the card situation.
-
- 
-
-Whether or not a field is traced does not change the meaning of the field. For that reason, I am considering these indicators not relevant for this analysis.
-
- 
-Non-filing 
-
- 
-
-We've all gotten frustrated at systems that file titles or other strings under "The " so it seems like a good idea not to lose this information.The MARC record has handled this using an indicator that has a number representing the number of characters (not bytes, characters) to ignore from the left-hand side of the string when "filing" -- or what we would call "sorting" today.
-
- 
-
-My feeling is that we should create two elements: display form and sort form. The trick in implementation will be to keep links between the two forms so it is known that they represent the same string.
+## Non-filing indicators
+21.
+Non-filing indicators give a number from 1-9 of the characters (including blanks) that should be ignored in a heading that begins with an initial article, such as "The" or "An". The purpose is to create machine-controlled sorting that begins with the first significant word. This is applied to titles in MARC21.
 
 There are 11 fields that have non-filing indicators:
 
- 
-
 130, 222, 240, 242, 243, 245, 440, 630, 730, 740, 830
  
+245 _4 The wizard of Oz 
+Sort string = wizard of Oz
 
-The non-filing indicator is a single digit, 0-9, that says how many characters to ignore when filing/sorting the string. Thus:
+This only allows non-filing at the beginning of a left-anchored string. A feature was added to USMARC in 1998 that would allow the use of control characters around any portion of a string to indicate that it would be treated as "non-filing." However, this has not been implemented (at least not in North American libraries). It also isn't clear what "non-filing" means in terms of indexing of the string. Removing portions of a string for sorting is not the same as removing those portions for indexing and retrieval. If the string is:
 
+```
+<x88>The <x89>wizard <x88>of<x89> Oz
+```
+What should the system return on a search that uses "the wizard of Oz" as its query string?
  
+## "Existence in x collection"
 
-245 = The wizard of Oz
-
-non-filing = 4
-
-result = wizard of Oz
-
+There are four call number fields (050, 055, 060, 070) that include a binary element for whether the item is in the related collection, e.g. "Existence in NAL collection" on the NAL call number tag (070). This happens to be an indicator, but it really is a binary data element relating to holdings. 
  
-
-Many systems internally create a filing form that uses the non-filing indicator and also normalizes the string removing punctuation, changing case to all lower (or upper), etc.
-
- 
-
-I see two options: 1) create two elements: display form and sort form. The trick in implementation will be to keep links between the two forms so it is known that they represent the same string. 2) Have the non-filing coding be part of the string. There is an option to do this in MARC (never implemented in the U.S.). The disadvantage is that it needs to be understood by everyone who will receive the string with this special coding.
-
- 
-
-<x88>The <x89>wizard of Oz
-
- 
-"Existence in x collection"
-
-There are four call number fields (050, 055, 060, 070) that include a binary element for whether the item is in the related collection, e.g. "Existence in NAL collection" on the NAL call number tag (070). This happens to be an indicator, but it really is a binary data element relating to holdings. In the section on the 0XX fields, I treat these as free-standing data elements. My thinking is that their placement on the fields for the call numbers is convenient but the information is about the primary resource of the record.
-
- 
-II. Indicators that change or enhance the meaning of the field
+# Indicators that change or enhance the meaning of the field
 
  
 Identifying sources
