@@ -18,8 +18,30 @@ The 008 field is always 40 characters in length and the coded data elements are 
 
 Positions 00-17 and 35-39 are the same for all resource formats. The remaining positions are defined differently for different formats.
 
+The date information in positions 06-14 is nearly always redundant with textual information in the variable fields, although there may be some differences, such as when the data is unknown or not clear. The 008 can have a date like "196u" while the descriptive field may read "1962?". 
+
+Also, since the date is primarily used to order displays by date of publication, the use of non-numerics in dates forces those dates to sort before the complete dates, thus often giving users the least useful dates first.
+
 # 006
 
 The 008 carries data that is format specific, and some number of resources include more than one format (e.g. a sound recording with an included libretto). The 008 cannot be repeated because there is no place within the field to indicate what the format is - the format is interpreted from the Leader, which only contains one format code. For this reason, the 006 field was developed. The 006 field is repeatable and carries a format code plus the format-specific data elements that are in positions 18-34 of the 008 field. The 006 is 100% redundant with the 008, but was needed because the original design did not anticipate carrying coded information for multiple formats in a single MARC record.
 
-#007
+# 007
+
+The 007 field carries information about the physical formats of the resources being described. The first two characters of the 007 describe the format; subsequent character positions are defined differently for different formats. The 007 is repeatable. In some cases there are variable fields in the record that provide descriptive cataloging information of the display format. Although at times the coded data in the 007 and the descriptive information in the variable fields give the same information, there is no direct link between the coded data and the variable fields.
+
+# Code Lists
+
+There are over 200 individual code lists that are used in the fixed fields, some of which are used only with specific formats. For example:
+
+```
+color (maps)
+  * One color
+  * Multicolored
+color (microforms)
+  * Black-and-while
+  * Multicolored
+  * Mixed
+  ```
+
+# Summary of problems
