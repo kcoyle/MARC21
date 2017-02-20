@@ -7,8 +7,16 @@ There are some efforts that claim to be post-MARC bibliographic record formats, 
 
 * MARC21 and ISO2709 - differences
 * Coded fixed field data
+  * Redundancy
+  * Different values for same term
 * Indicators
 * Variable fields
   * Inconsistent coding
+  * Varying level of detail
   * Ambiguous data
+  * Redundancy
+  * Non-distinguished data elements
+  * Two-level
+  * No real linking
+  
   
