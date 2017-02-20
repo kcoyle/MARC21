@@ -70,7 +70,7 @@ Display constant controller
 8 - No display constant generated
 ```
 
- ## Display constant
+## Display constant
  
 Display constants were used when cards were produced by vendors and represented printing options for the cards and card sets. Display constants are used in ILSs based on tables, generally, and include fields that have no MARC subfield or indicator for display. (Note, some MARC fields have a $i subfield that contains a display text that precedes the contents of the field. This is another example where similar or same functionality is achieved in more than one way in MARC.)
 
@@ -200,56 +200,34 @@ Some of the "display constant controllers" actually refine the meaning of the ta
 | | 1 - Incomplete contents |
 | | 2 - Partial contents |
 | | 8 - No display constant generated|
-511 Participant or performer note, indicator 1, Display constant controller 	
-
-0 - No display constant generated
-1 - Cast
-
-(used when note contains cast list, but note does not always have that)
-520 Summary, etc., indicator 1, Display constant controller 	
-
-# - Summary
-0 - Subject
-1 - Review
-2 - Scope and content
-3 - Abstract
-4 - Content advice
-8 - No display constant generated
-
-(adds meaning to 'etc.')
-521 Target Audience Note, indicator 1, Display constant controller 	
-
-# - Audience
-0 - Reading grade level
-1 - Interest age level
-2 - Interest grade level
-3 - Special audience characteristics
-4 - Motivation/interest level
-8 - No display constant generated
-
-(defines the aspect of the target audience that is included)
-555 Cumulative index/Finding Aids Note, indicator 1, Display constant controller 	
-
-# - Indexes
-0 - Finding aids
-8 - No display constant generated
-
-(two things carried in otherwise undistinguished field)
-
+| 511 Participant or performer note, indicator 1, Display constant controller | 0 - No display constant generated |
+| | 1 - Cast |
+| 520 Summary, etc., indicator 1, Display constant controller | # - Summary |
+| | 0 - Subject |
+| | 1 - Review |
+| | 2 - Scope and content |
+| | 3 - Abstract |
+| | 4 - Content advice |
+| | 8 - No display constant generated |
+| | (all but 8 adds meaning to 'etc.') |
+| 521 Target Audience Note, indicator 1, Display constant controller | # - Audience |
+| | 0 - Reading grade level |
+| | 1 - Interest age level |
+| | 2 - Interest grade level |
+| | 3 - Special audience characteristics |
+| | 4 - Motivation/interest level |
+| | 8 - No display constant generated |
+| | (8 can mean "other" or any of the above |
+| | but with the meaning inherent in the text) |
+| 555 Cumulative index/Finding Aids Note, indicator 1, Display constant controller | # - Indexes |
+| | 0 - Finding aids |
+| | 8 - No display constant generated |
+| | (two entirely different meanings in one field) |
  
+# Relationship of Indicators with Fields and Subfields
 
- 
- 
-III. Other indicator functions
- 
-IV. Indicators, Fields and Subfields
-
-Because the MARC indicators are at the field level, it might be logical to assume that they modify the entire field. The source and type indicators, and the display indicators that actually modify the meaning of the field, generally modify the combined set of subfields except the control subfields ($2-$8). (I am still checking to see if I can find any cases of indicators that modify the meaning of a control subfield.)
-
- 
+Because the MARC indicators are at the field level, it might be logical to assume that they modify the entire field. The source and type indicators, and the display indicators that actually modify the meaning of the field, generally modify the combined set of subfields except the control subfields ($2-$8). 
 
 Many indicators appear to modify only the $a subfield, such as the non-filing indicator in 245, or the "Type of personal name entry element" in the x00 name fields. These fields can have many other subfields that are not affected by the indicator value.
-
- 
 
 The indicators that provide only display constants that do not affect the meaning of the field (described in section I) are at the field level, but only indicate a display constant that would precede the field; they do not modify or amplify the field at all.
