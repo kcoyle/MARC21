@@ -6,6 +6,7 @@ There are some efforts that claim to be post-MARC bibliographic record formats, 
 # Contents
 
 * MARC21 and ISO2709 - differences
+* Statistics
 * Coded fixed field data
   * Redundancy
   * Different values for same term
