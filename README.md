@@ -5,12 +5,12 @@ There are some efforts that claim to be post-MARC bibliographic record formats, 
 
 # Contents
 
-* MARC21 and ISO2709 - differences
-* Statistics
+* [MARC21 and ISO2709 - differences](MARC21/MARC21&ISO2709.md)
+* [Statistics](MARC21/statistics.md)
 * Coded fixed field data
   * Redundancy
   * Different values for same term
-* Indicators
+* [Indicators](MARC21/indicators.md)
 * Variable fields
   * Inconsistent coding
   * Varying level of detail
