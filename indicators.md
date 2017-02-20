@@ -69,6 +69,7 @@ Display constant controller
 0 - Case file characteristics
 8 - No display constant generated
 ```
+
  ## Display constant
  
 Display constants were used when cards were produced by vendors and represented printing options for the cards and card sets. Display constants are used in ILSs based on tables, generally, and include fields that have no MARC subfield or indicator for display. (Note, some MARC fields have a $i subfield that contains a display text that precedes the contents of the field. This is another example where similar or same functionality is achieved in more than one way in MARC.)
@@ -85,12 +86,13 @@ One type of display indicator is a note controller. Note controllers are binary 
 This is another function that is deeply linked to the card catalog. "Tracing" meant that a card would be generated with that field's data at the top above the main body of the card. Each traced card became an entry in the catalog. It is analogous to the question of whether or not certain fields should be indexed, but is not precisely equivalent since it is in some cases only pertinent to the card situation.
  
 ## Non-filing indicators
-21.
+
 Non-filing indicators give a number from 1-9 of the characters (including blanks) that should be ignored in a heading that begins with an initial article, such as "The" or "An". The purpose is to create machine-controlled sorting that begins with the first significant word. This is applied to titles in MARC21.
 
 There are 11 fields that have non-filing indicators:
-
+```
 130, 222, 240, 242, 243, 245, 440, 630, 730, 740, 830
+ ```
  
 245 _4 The wizard of Oz 
 Sort string = wizard of Oz
@@ -108,137 +110,96 @@ There are four call number fields (050, 055, 060, 070) that include a binary ele
  
 # Indicators that change or enhance the meaning of the field
 
- 
-Identifying sources
+## Identifying sources
 
 A large number of the indicators are used to identify the authoritative source of some of the data in the field. I say "some" of the data because MARC fields are designed around display, not semantics, and therefore can contain subfields that cover more than one logical data entity. The indicators that identify sources give the information that would normally be included in a URI; that is, they provide uniqueness for the data in the subfields, and they indicate the authoritative source of the data.
 
- 
-
 The indicators have a variety of names:
 
+```
 code source 9052, 072)
-
 national bibliographic agency (016)
-
 number source (086)
-
 source of call number (050, 060)
-
 source of classification number (082)
-
 source of code (041, 047)
-
 source of term (656. 657)
-
 subject heading system/thesaurus (600, 610, 611, 630, 648, 650, 655)
-
+```
  
-
 In most cases, the indicator has values ranging from 0 to 5 or 6. Any source not included in that value list is given in the subfield $2. Indicator value 7 means "Source specified in $2," and therefore serves as a re-direct to the $2 subfield. There are two significant aspects to this: the first is that the subfield $2 has the same role as an indicator even though it is a subfield; the second is that the $2 represents a much expanded list of possible sources. Fortunately, the $2 is not free text but takes its values from the MARC source codes for vocabularies, rules and schemas.
 
- 
+It isn't clear in the MARC21 documentation whether the indicator applies to the entire tag (all subfields) or only some subfields. One can probably assume that the information about the source does not apply to the control subfields ($3, $5, $6, $8). These subfields have a different role, generally to create linkages between fields in the same record. However, in ... (find field with ambiguous subfield)
 
-It is my assumption that the information about the source does not apply to the control subfields ($3, $5, $6, $8). These subfields have a different role, generally to create linkages between fields in the same record.
-
- 
-Identifying Element Types
+## Indicators identifying Element Types
 
 These indicators definitely change the meaning of the field. They are generally a way to get more than one meaning out of a single MARC tag. For example:
 
- 
-
+```
 545 - Biographical or Historical Data
-
 First indicator:
-
 0 - Biographical sketch
-
 1 - Administrative history
+```
 
+In this field, there are two very distinct possible meanings which are controlled by the indicator. The indicator entirely changes the semantics of the field, thus getting double duty out of a single tag.
+
+Some of the "type" indicators overlap with the display indicators. In the case below, there is a clear type ("Mailing") that is coded with one indicator value, and an uncontrolled display field ($i) that covers every other kind of type. The values of the $i are uncontrolled so there is no vocabulary that clearly defines a time other than "mailing." Since it isn't controlled, you have only two possible types: "Mailing" and "other".
  
-
-Some of these overlap with the display indicators. In the case below, there is a clear type ("Mailing") and an uncontrolled display field ($i) that covers every other kind of type. (If the vocabulary of that $i were controlled, then you would have multiple types. Since it isn't controlled, you have "Mailing" and "other".)
-
- 
-
+```
 270 - Address
-
 Second indicator:
-
 0 - Mailing
-
 7 - Type specified in subfield $i
+``` 
 
- 
+In some cases, such as the 246 second indicator, the indicator provides a clear list of types, each resulting in a distinct data element.
 
-Then again, the 246 second indicator provides a clear list of types:
-
- 
-
+ ```
 246 - Varying Form of Title
-
 0 - Portion of title
-
 1 - Parallel title
-
 2 - Distinctive title
-
 3 - Other title
-
 4 - Cover title
-
 5 - Added title page title
-
 6 - Caption title
-
 7 - Running title
-
 8 - Spine title
-
+```
  
-
-It's not always clear to me why some of the distinctions are needed, or if any systems pay attention to them. Some examples of these:
-
+It's not always clear why some of the distinctions are needed, or if they should trigger systems actions. Some examples of these:
  
-
+```
 655 - Index Term-Genre/Form
-
 First indicator:
-
 # - Basic
-
 0 - Faceted
+```
 
- 
+How should systems treat basic and faceted forms? Is there a difference?
 
+In the 100 field, there is an indicator for different forms of personal names: those that begin with or only consist of a forename ("Homer", "Arnaldur Indriðason"), those that begin with a surname ("Smith, John"), and those that represent a family name ("Smith family"). The latter, the family name, seems to have a distinct meaning, but the reason for the coding of the first two, at least in terms of desired actions, is unclear.
+
+```
 100 - Main Entry-Personal Name
-
 First indicator:
-
 0 - Forenamne
-
 1 - Surname
-
 3 - Family name
+```
+ 
+## Pseudo-display controllers
+
+Some of the "display constant controllers" actually refine the meaning of the tag, not just the display. These will need to be treated as semantically separate elements in the analysis.
 
  
-
- 
-
- 
-Pseudo-display controllers
-
-I was surprised to discover that some of the "display constant controllers" actually refine the meaning of the tag. These will need to be treated as semantically separate elements in the analysis.
-
- 
-Tag + indicator label
-	Indicator values
-505 Contents note, indicator 1, Display constant controller
-	0 - Contents
-1 - Incomplete contents
-2 - Partial contents
-8 - No display constant generated
+| Tag + indicator label | Indicator values|
+| --------------------- | ---------------- |
+| 505 Contents note, indicator 1, Display constant controller | 0 - Contents|
+| | 1 - Incomplete contents |
+| | 2 - Partial contents |
+| | 8 - No display constant generated|
 511 Participant or performer note, indicator 1, Display constant controller 	
 
 0 - No display constant generated
