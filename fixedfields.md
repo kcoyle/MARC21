@@ -45,3 +45,10 @@ color (microforms)
   ```
 
 # Summary of problems
+
+* Each format requires a different overlay to interpret the coded positions
+* There is no stated functionality for the codes - what is their intended use?
+* In a number of cases, a blank in a fixed field position is meaningful, so there is no way to know whether the blank means that the cataloger did not fill in the code for that position, or if the blank carries its intended meaning.
+* There are few library systems that make use of most of the coded data. (It would be great to find some data on this.) Yet the fact that the data is coded implies that the codes are for machine use. It is a waste of time for catalogers to fill in these codes if they are not in fact used in systems.
+* Because systems do not use the codes, some catalogers do not fill in these fields in records. If you have a file where some records have the codes and others do not, even if you want to make use of the codes for searching you cannot because searches will never retrieve records where the codes were not filled in.
+
