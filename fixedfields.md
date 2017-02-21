@@ -52,3 +52,6 @@ color (microforms)
 * There are few library systems that make use of most of the coded data. (It would be great to find some data on this.) Yet the fact that the data is coded implies that the codes are for machine use. It is a waste of time for catalogers to fill in these codes if they are not in fact used in systems.
 * Because systems do not use the codes, some catalogers do not fill in these fields in records. If you have a file where some records have the codes and others do not, even if you want to make use of the codes for searching you cannot because searches will never retrieve records where the codes were not filled in.
 
+# Some systems usage
+
+* BC Libraries. Shows how fixed field information shows in displays, but only appears to make use of physical format code. http://docs.sitka.bclibraries.ca/Sitka/current/html/cat-MARC-leader.html
