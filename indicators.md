@@ -1,7 +1,7 @@
 
 # MARC Indicators
 
-The indicators in MARC pose a number of problems because of the great variety of meanings and ways that they have been used. Some indicators control card printing; some give provenance information; some drastically change the meaning of the field. In addition, it often isn't cleaar whether indicators address the entire field, or only certain subfields.
+The indicators in MARC pose a number of problems because of the great variety of meanings and ways that they have been used. Some indicators control card printing; some give provenance information; some drastically change the meaning of the field. In addition, it often isn't cleaar whether indicators address the entire field, or only certain subfields. Indicators in the MARC21 record are limited to characters from 0-9, and each indicator is a separate code. This means that there are all told ten possible meanings for each indicator. Had the indicators been treated as a single unit there would have been 100 possible values, but with the decision that there would be only two indicators per field, this would have limited the field to a single coded meaning. The ISO 2709 record format allows as many as 9 indicator positions, and does not specify that each position must be defined separately. 
 
  
 ## Undefined and blank indicators
@@ -107,6 +107,25 @@ What should the system return on a search that uses "the wizard of Oz" as its qu
 ## "Existence in x collection"
 
 There are four call number fields (050, 055, 060, 070) that include a binary element for whether the item is in the related collection, e.g. "Existence in NAL collection" on the NAL call number tag (070). This happens to be an indicator, but it really is a binary data element relating to holdings. 
+
+## Source of Code (Thesaurus)
+
+Indicators are used to define the source of the information in fields that are filled in from thesauri or other lists. Since each indicator has only values from 0-9 and blank, the number of needed codes outgrew the capabilities of the indicator positions. To solve this, one indicator value, "7", was used to state that the source is specified in the $2 subfield.
+
+```
+Thesaurus
+0 - Library of Congress Subject Headings
+1 - LC subject headings for children's literature
+2 - Medical Subject Headings
+3 - National Agricultural Library subject authority file
+4 - Source not specified
+5 - Canadian Subject Headings
+6 - Répertoire de vedettes-matière
+7 - Source specified in subfield $2
+```
+
+This means that the same information is coded either in the indicator or in the variable subfield $2. Presumably those sources with indicator codes would not also be included in the $2 subfield. This is, however, an indication of how the record format has failed to grow with the data needs, and that results in the same information being coded differently based not on the importance of the data but purely on the timing when it became part of the information to be provided in the MARC21 record.
+
  
 # Indicators that change or enhance the meaning of the field
 
