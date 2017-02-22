@@ -25,6 +25,7 @@ Although FRBR is purely conceptual at this point, it does imply a new approach t
 # Summary of Problems
 
 The main problems that users of the MARC21 format and developers of the format standard have encountered are:
+
 1. Limitations on the size of records that can be created with Z39.2: a maximum of 9999 characters per field and 99999 characters per record. The latter effectively limits the number of fields that a record can contain.
 2. Inherent limitations in the MARC implementation of Z39.2: a maximum of 26 distinct content subfields and 10 control subfields can be defined per tag.
 3. A large number of data elements with some degree of redundancy (X00 fields, X10 fields, title fields and subfields, etc.)
