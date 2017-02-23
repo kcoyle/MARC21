@@ -30,7 +30,7 @@ The main problems that users of the MARC21 format and developers of the format s
 
 1. Limitations on the size of records that can be created with Z39.2: a maximum of 9999 characters per field and 99999 characters per record. The latter effectively limits the number of fields that a record can contain.
 2. Inherent limitations in the MARC implementation of Z39.2: a maximum of 26 distinct content subfields and 10 control subfields can be defined per tag.
-3. A large number of data elements with some degree of redundancy (X00 fields, X10 fields, title fields and subfields, etc.)
+3. A large number of data elements with some degree of redundancy (X00 fields, X10 fields, title fields and subfields, etc.), and even some that use different coding for the same elements.
 4. Inconsistency between the treatment of same of similar data elements across fields.
 5. Fixed fields with values embedded in the standard.
 6. Fixed fields that should be parallel to textual fields are a) located separately from those fields b) may not have the same values, either because of input problems or because of limitations in the value list.
