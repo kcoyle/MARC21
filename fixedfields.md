@@ -43,6 +43,7 @@ color (microforms)
   * Multicolored
   * Mixed
   ```
+Some of the larger code lists, such as those for language and for country of publication, are maintained outside of the MARC21 format. The majority of the lists, however, are part of the MARC21 standard and can only be changed by making modifications to the standard itself. The result of this is that it may take two to three years to add a new code. When in 2008 a proposal was made to add a code to the physical format area for HD DVDs, the standards group decided that the technology was already obsolute. Although codeswere approved for laser discs and Blu-ray discs (the latter in 2008) these do not yet appear in the MARC21 documentation on Library of Congress's site.
 
 # Summary of problems
 
@@ -51,6 +52,7 @@ color (microforms)
 * In a number of cases, a blank in a fixed field position is meaningful, so there is no way to know whether the blank means that the cataloger did not fill in the code for that position, or if the blank carries its intended meaning.
 * There are few library systems that make use of most of the coded data. (It would be great to find some data on this.) Yet the fact that the data is coded implies that the codes are for machine use. It is a waste of time for catalogers to fill in these codes if they are not in fact used in systems.
 * Because systems do not use the codes, some catalogers do not fill in these fields in records. If you have a file where some records have the codes and others do not, even if you want to make use of the codes for searching you cannot because searches will never retrieve records where the codes were not filled in.
+* The codes are integrated into the standard itself, making change difficult because the standards process is exceedingly slow. The standard does not keep up with the rate of change of the technical formats that libraries collect and catalog.
 
 # Some systems usage
 
