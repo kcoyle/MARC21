@@ -4,6 +4,8 @@
 * All data elements to be coded identically wherever they appear
 * Extensible; can add new elements as needed
 * No limits on record or field size
+* Lists of values maintained outside the format standard
+* Feasible integration of local elements and values
 * Support part/whole relationships
 * Coding fully defines data elements, not order
 * No ambiguous ("X or Y") elements
