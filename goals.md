@@ -14,4 +14,5 @@
 * Display is data-driven where possible
 * Linking between records for relationships (e.g. X is adaptation of Y)
 * Data description is in a standard machine-actionable coding
+* Supports versioning
 
