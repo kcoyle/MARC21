@@ -1,7 +1,7 @@
 # Basic goals for a metadata format
 
 * Each data point (piece of information) exists only once in each description
-* All data elements to be coded identically wherever they appear
+* All entity descriptions are coded identically wherever they appear
 * Extensible; can add new elements as needed
 * No limits on record or field size
 * Lists of values maintained outside the format standard
