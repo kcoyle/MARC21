@@ -1,6 +1,6 @@
 # Basic goals for a metadata format
 
-* Enter each piece of data only once
+* Each data point (piece of information) exists only once in each description
 * All data elements to be coded identically wherever they appear
 * Extensible; can add new elements as needed
 * No limits on record or field size
