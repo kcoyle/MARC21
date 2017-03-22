@@ -5,6 +5,8 @@
 * Extensible; can add new elements as needed
 * No limits on record or field size
 * Lists of values maintained outside the format standard
+* Fully support Unicode
+* Support internationalization of input and output displays
 * Feasible integration of local elements and values
 * Support part/whole relationships
 * Coding fully defines data elements, not order
