@@ -2,7 +2,6 @@
 
 ## Physical format
 
-* 
 * No limits on record or field size
 * Support part/whole relationships
 * Fully extensible; can add new elements as needed
