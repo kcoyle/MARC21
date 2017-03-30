@@ -1,6 +1,10 @@
 # MARC21 fixed fields (006, 007, 008)
 
-The fixed fields are the proof that the developers and maintainers of the MARC format recognized that there is a need for DATA that the textual fields and subfields do not fulfill. Unfortunately, this data portion of the record seems to be considered of secondary importance in comparison to the textual fields. These data elements had no use for the card display, but some elements were used to create reports such as lists of new library acquisitions. 
+The fixed fields are the proof that the developers and maintainers of the MARC format recognized that there is a need for DATA that the textual fields and subfields do not fulfill. Unfortunately, this data portion of the record seems to be considered of secondary importance in comparison to the textual fields. These data elements had no use for the card display, but some elements were used to create reports such as lists of new library acquisitions. With a few exceptions, the elements in the fixed fields are also included in the variable fields as text. As an example, the 008 for books allows up to four codes representing the types of illustrations in the book (illustrations, maps, portraits, charts, etc.). If the codes for "illustrations" and "maps" are in the 008, the physical description field will also have "ill., maps". 
+
+     xi, 622 p. : ill., maps ; 26 cm.
+
+Note that there is considerable information in the textual fields that is not also coded in a fixed field, even if the information itself could be reduced to a datum; neither the number of pages ("xi, 622 p.") nor the height of the item ("26 cm.") have a code equivalent. 
 
 In library systems there is a strong "chicken and egg" dilemma relating to the fixed fields: they are not seen as being important because there isn't a visible system use of them, but because record creators often neglect to input the values in these fields they cannot be used reliably for automated functions. The fact that with a few exceptions the fixed fields are valid for only certain resource formats (text, maps, music, etc.) also makes it difficult to find uses for them in catalogs of mixed content. It may not be obvious to a user that an element like Target Audience will retrieve books, music, computer files and visual materials, but not maps, serials or sound recordings.
 
