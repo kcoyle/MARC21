@@ -1,10 +1,10 @@
 # What Catalogers Like/Love About MARC
 
-There is resistance to move away from MARC for cataloging among some in the cataloging community. For these librarians, MARC has many positive qualities. 
+There is resistance to moving away from using the MARC record for cataloging among some in the cataloging community. For these librarians, MARC has many positive qualities, and these are qualities that are not perceived to exist in the proposals for linked data. 
 
 ## MARC is Familiar
 
-Library cataloging makes use of a very complex set of rules that determine how a resource is described. Once the decisions are made regarding the content of the description, those results are coded in MARC. Because the creation of the catalog record has been done in the MARC format since the late 1970's, working catalogers today have only known MARC as the cataloging interface. Catalogers speak in "MARC" - using the tags to name data elements - e.g. "245" instead of "title proper". 
+Library cataloging makes use of a very complex set of rules that determine how a resource is described. Once the decisions are made regarding the content of the description, those results are coded in MARC. Because the creation of the catalog record has been done in the MARC format since the late 1970's, working catalogers today have known only MARC as the bibliographic record format and the cataloging interface. Catalogers speak in "MARC" - using the tags to name data elements - e.g. "245" instead of "title proper". 
 
 ## MARC is WYSIWYG
 
@@ -21,4 +21,5 @@ MARC is used internationally, and because the record uses numerics and alphanume
       245 02   |a לטוס עם עין אחת / |c דני בז.
       
 it is still clear that this is a title field with a main title (no subtitle), followed by a statement of the author's name as provided on the title page of the book.
+
 
