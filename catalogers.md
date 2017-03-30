@@ -12,11 +12,12 @@ Those who work with MARC consider it to be "human readable." Most of the descrip
 
 ## Control
 
-The coding is visible, and therefore what the cataloger creates on the screen is virtually identical to the machine-readable record that is being created. 
+The coding is visible, and therefore what the cataloger creates on the screen is virtually identical to the machine-readable record that is being created. Everything that will be shown in the catalog is in the record (with the exception of cover art, at least in some catalogs). The MARC rules say that the order of fields and subfields in the record are the order in which that information should be displayed in the catalog. Some systems violate this by putting the fields in numeric order. Catalogers wish to control the order of display and are frustrated when they cannot. In general, changing anything about the record with automated procedures can un-do the decisions made by catalogers as part of their work, and is a cause of frustration for catalogers. 
 
 ## MARC is International
 
 MARC is used internationally, and because the record uses numerics and alphanumeric codes, a record created in another country is readable to other MARC users. Note that this was also the purpose of the International Standard Bibliographic Description (ISBD), which instead of tags uses punctuation marks to delimit elements of the bibliographic description. If a cataloger sees this, but cannot read the text:
+
       245 02   |a לטוס עם עין אחת / |c דני בז.
       
 it is still clear that this is a title field with a main title (no subtitle), followed by a statement of the author's name as provided on the title page of the book.
