@@ -4,8 +4,11 @@ The fixed fields are the proof that the developers and maintainers of the MARC f
 
      xi, 622 p. : ill., maps ; 26 cm.
 
-Note that there is considerable information in the textual fields that is not also coded in a fixed field, even if the information itself could be reduced to a datum; neither the number of pages ("xi, 622 p.") nor the height of the item ("26 cm.") have a code equivalent. 
+Note that there is considerable information in the textual fields that is not also coded in a fixed field, even if the information itself could be reduced to a datum; neither the number of pages ("xi, 622 p.") nor the height of the item ("26 cm.") have a code equivalent. However, there is a code for the country of publication (or the state in the case of the US), something that can often be intuited from the data in the record but is not included as a cataloging element.
 
+     Shanghai : Shanghai ren min chu ban she, 1996
+     New York : Stein and Day, 1979
+ 
 In library systems there is a strong "chicken and egg" dilemma relating to the fixed fields: they are not seen as being important because there isn't a visible system use of them, but because record creators often neglect to input the values in these fields they cannot be used reliably for automated functions. The fact that with a few exceptions the fixed fields are valid for only certain resource formats (text, maps, music, etc.) also makes it difficult to find uses for them in catalogs of mixed content. It may not be obvious to a user that an element like Target Audience will retrieve books, music, computer files and visual materials, but not maps, serials or sound recordings.
 
 Some current library systems make use of fixed field data in their "faceted" display. This typically uses the coded date of publication and the language of text. The facets relating to resource format (book, sound recording, etc.) most likely comes from the coded format in the Leader. 
