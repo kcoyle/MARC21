@@ -22,4 +22,12 @@ MARC is used internationally, and because the record uses numerics and alphanume
       
 it is still clear that this is a title field with a main title (no subtitle), followed by a statement of the author's name as provided on the title page of the book.
 
+## MARC is the Lingua Franca of Cataloging
+
+This is probably the key point that comprises all of the above, but it is important to state it as such. This means that the entire workflow, the training materials, the documentation - all use MARC.
+
+## MARC is Concise
+
+MARC is concise as a physical format (something that is less important today), and it is also concise on the screen. "245" represents "title proper"; "240" represents "uniform title"; "130" represents "uniform title main entry". 
+
 
