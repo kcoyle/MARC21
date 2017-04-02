@@ -8,9 +8,9 @@ Library cataloging makes use of a very complex set of rules that determine how a
 
 ## MARC is WYSIWYG
 
-Those who work with MARC consider it to be "human readable." Most of the description is text, therefore what the cataloger creates is exactly what will appear on the screen in the library catalog. If a cataloger types "ill." that is what will display; if the cataloger instead types "illustrations" then that is what will display. 
+Those who work with MARC consider it to be "human readable." Most of the description is text, therefore what the cataloger creates is exactly what will appear on the screen in the library catalog. If a cataloger types "ill." that is what will display; if the cataloger instead types "illustrations" then that is what will display. In terms of viewing a MARC record on a screen, some cataloger displays show the tags and codes to one side, and the text of those elements is clearly readable as text. 
 
-## Control
+## MARC Gives Catalogers Control
 
 The coding is visible, and therefore what the cataloger creates on the screen is virtually identical to the machine-readable record that is being created. Everything that will be shown in the catalog is in the record (with the exception of cover art, at least in some catalogs). The MARC rules say that the order of fields and subfields in the record are the order in which that information should be displayed in the catalog. Some systems violate this by putting the fields in numeric order. Catalogers wish to control the order of display and are frustrated when they cannot. In general, changing anything about the record with automated procedures can un-do the decisions made by catalogers as part of their work, and is a cause of frustration for catalogers. 
 
@@ -24,10 +24,26 @@ it is still clear that this is a title field with a main title (no subtitle), fo
 
 ## MARC is the Lingua Franca of Cataloging
 
-This is probably the key point that comprises all of the above, but it is important to state it as such. This means that the entire workflow, the training materials, the documentation - all use MARC.
+This is probably the key point that comprises all of the above, but it is important to state it as such. This means that the entire workflow, the training materials, the documentation - all use MARC. Catalogers today think in MARC.
 
 ## MARC is Concise
 
-MARC is concise as a physical format (something that is less important today), and it is also concise on the screen. "245" represents "title proper"; "240" represents "uniform title"; "130" represents "uniform title main entry". 
+MARC is concise as a physical format (something that is less important today than it was in the 1960s when MARC was developed), and it is also concise on the screen. "245" represents "title proper"; "240" represents "uniform title"; "130" represents "uniform title main entry". Often an entire record can be viewed on a single screen, and the tags and subfield codes take up very little display space.
+
+# MARC is Very Detailed
+
+MARC21 has about 200 tags currently defined, and each of these can have up to 36 subfields. There are about 2000 subfields defined in MARC21, although the distribution is uneven and depends on the semantics of the field; some fields have only a handful of subfields, and in others there are few codes remaining that could be assigned.
+
+# MARC is Flat
+
+The MARC record is fairly flat, with only two levels of coding: field and subfield. This is a simple model that is easy to understand and easy to visualize. 
+
+# MARC is Extensible
+
+Throughout its history, the MARC record has been extended by adding new fields and subfields. 
+
+# MARC has Mnemonics
+
+Some coding is either consistent or mnemonic, which makes it easier for catalogers to remember the meaning of the codes. There are code blocks that refer to cataloging categories, such as the title block (2XX), the notes block (5XX) and the subject block (6XX). Some subfields have been reserved through for particular functions, such as the use of the numeric subfields in 0-8. In other cases, 
 
 
