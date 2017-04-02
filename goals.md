@@ -5,7 +5,9 @@
 * No limits on record or field size
 * Support part/whole relationships
 * Fully extensible; can add new elements as needed
-* Support linking between entities (e.g. FRBR work/work relationships)
+* Support linking between entities 
+  * e.g. FRBR work/work relationships
+  * creators to bibliographic description
 * Enable Unicode everywhere
 * Support versioning
 * Format definition is in a standard machine-actionable encoding
