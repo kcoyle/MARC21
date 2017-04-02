@@ -46,4 +46,6 @@ Throughout its history, the MARC record has been extended by adding new fields a
 
 Some coding is either consistent or mnemonic, which makes it easier for catalogers to remember the meaning of the codes. There are code blocks that refer to cataloging categories, such as the title block (2XX), the notes block (5XX) and the subject block (6XX). Some subfields have been reserved through for particular functions, such as the use of the numeric subfields in 0-8. In other cases, the mnemonic is used in certain contexts, such as the use of subfield "v" for the volume information of series. In other fields, the "v" may be used for something else, such as the "form" subfield in subject fields, but the context makes it clear.
 
+There are also field mnemonics. For example, all tagged fields that have "00" in the second and third places are personal name fields. All fields and subfields that use the number 9 are locally defined (with a few well-known exceptions). 
+
 
