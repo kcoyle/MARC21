@@ -11,6 +11,14 @@ There are tools that process the MARC record that can be used without having to 
 * statistical analysis of a file of records; this can be a general overview of the file or a specific inquiry about quality such as which records are missing a particular field
 * batch updates; batch updates can be used to include particular information, such as the library name and ownership information, or to correct known problems, like records that have retained an obsoleted value.
 
+## The Mnemonics 
+
+The mnemonics in MARC tagging make it easy to select logical groups of fields. A search on tags with the first character "6" selects all of the subject headings. Also, some fields with similar tags contain the same subfields, like all fields with the second and third characters "11" (meaning the name of a corporate body). 
+
+## Coded Data
+
+There are data elements that are represented in certain positions of fields 006-008 that are alphanumeric codes. Most of these are a single character, although some occupy more than one position. For example,there is a one-character code to indicate the publication frequency of a periodical: a=Annual, b=Bimonthly, etc. For books there are four positions in which to code the nature of the contents, such as a=illustrations, b=maps. That there are four positions means that up to four characteristics may be coded. 
+
 ## Library Systems Know MARC
 
 MARC is the common input and output format for nearly all major library systems in use. Because libraries will not have the capacity (nor would it be efficient) to create their systems in-house, vendor support is essential. 
