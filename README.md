@@ -5,6 +5,9 @@ There are some efforts that claim to be post-MARC bibliographic record formats, 
 
 # Contents
 
+* [Introduction](MARC21/introduction.md)
+* [Basic Goals for a Metadata Format](MARC21/goals.md)
+* [What Catalogers Like About MARC](MARC21/catalogers.md)
 * [MARC21 and ISO2709 - differences](MARC21/MARC21&ISO2709.md)
 * [Statistics](MARC21/statistics.md)
 * Coded fixed field data
