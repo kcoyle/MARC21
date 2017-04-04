@@ -22,3 +22,25 @@ There are data elements that are represented in certain positions of fields 006-
 ## Library Systems Know MARC
 
 MARC is the common input and output format for nearly all major library systems in use. Because libraries will not have the capacity (nor would it be efficient) to create their systems in-house, vendor support is essential. 
+
+# What Developers and Library Technologists Dislike About MARC
+
+## Data Quality
+
+One of the biggest concerns is that there are huge data quality issues. This is not just a "imperfect humans" problem, because MARC is not easily subject to validation other than a few required and a few non-repeatable fields. 
+
+## Ambiguous Fields
+
+There are fields that are defined as either X or Y. There are other fields that have been re-defined over the years, and there is no way to know under which set of rules data was created. 
+
+## Fixed Fields
+
+Fixed field data, which is the main data that can be addressed algorithmically, is either not filled in, is incorrect, or contradicts the same information in the display area (variable fields) of the record. 
+
+## Limited to MARC Only
+
+The MARC record cannot be intermingled with data from any other sources. 
+
+## The Standard
+
+The MARC standard is developed only through a Library of Congress process which is notriously slow. Once decided, adding new data elements has to be scheduled months or years in advance so that all major players (LoC, OCLC, and library systems vendors) can implement simultaneously.
