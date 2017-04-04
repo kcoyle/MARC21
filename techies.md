@@ -27,7 +27,7 @@ MARC is the common input and output format for nearly all major library systems 
 
 ## Data Quality
 
-One of the biggest concerns is that there are huge data quality issues. This is not just a "imperfect humans" problem, because MARC is not easily subject to validation other than a few required and a few non-repeatable fields. 
+One of the biggest concerns is that there are huge data quality issues. This is not just a "imperfect humans" problem, because MARC is not easily subject to validation other than a few required and a few non-repeatable fields, so creating better data through interface design may not be a plausible solution. 
 
 ## Ambiguous Fields
 
@@ -44,3 +44,7 @@ The MARC record cannot be intermingled with data from any other sources.
 ## The Standard
 
 The MARC standard is developed only through a Library of Congress process which is notriously slow. Once decided, adding new data elements has to be scheduled months or years in advance so that all major players (LoC, OCLC, and library systems vendors) can implement simultaneously.
+
+## Cataloging Concepts not Easily Knowable
+
+The MARC record can contain subtleties that make sense to (some) catalogers but that aren't obvious to technical staff trying to run applications. Most of these subtleties would provide context for the content but aren't visible in the MARC code itself.
