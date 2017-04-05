@@ -30,22 +30,26 @@ This is probably the key point that comprises all of the above, but it is import
 
 MARC is concise as a physical format (something that is less important today than it was in the 1960s when MARC was developed), and it is also concise on the screen. "245" represents "title proper"; "240" represents "uniform title"; "130" represents "uniform title main entry". Often an entire record can be viewed on a single screen, and the tags and subfield codes take up very little display space.
 
-# MARC is Very Detailed
+## MARC is Very Detailed
 
 MARC21 has about 200 tags currently defined, and each of these can have up to 36 subfields. There are about 2000 subfields defined in MARC21, although the distribution is uneven and depends on the semantics of the field; some fields have only a handful of subfields, and in others there are few codes remaining that could be assigned. 
 
-# MARC is Flat
+## MARC is Flat
 
 The MARC record is fairly flat, with only two levels of coding: field and subfield. This is a simple model that is easy to understand and easy to visualize. 
 
-# MARC is Extensible
+## MARC is Extensible
 
 Throughout its history, the MARC record has been extended by adding new fields and subfields. There are about 200 defined fields which means that there is room to add approximately 600 more. 
 
-# MARC has Mnemonics
+## MARC has Mnemonics
 
 Some coding is either consistent or mnemonic, which makes it easier for catalogers to remember the meaning of the codes. There are code blocks that refer to cataloging categories, such as the title block (2XX), the notes block (5XX) and the subject block (6XX). Some subfields have been reserved through for particular functions, such as the use of the numeric subfields in 0-8. In other cases, the mnemonic is used in certain contexts, such as the use of subfield "v" for the volume information of series. In other fields, the "v" may be used for something else, such as the "form" subfield in subject fields, but the context makes it clear.
 
 There are also field mnemonics. For example, all tagged fields that have "00" in the second and third places are personal name fields. All fields and subfields that use the number 9 are locally defined (with a few well-known exceptions). 
+
+## MARC is Finite and Authoritative
+
+MARC defines a record that is bounded. What you see in the record is all of the information that is being provided about the item being described. The concept of "infinite graphs" is hard to grasp, and hard to display on a screen. This also means that MARC is an authoritative statement of the library bibliographic description, whereas graphs may lead users to sources that are not approved by or compatible with the library view.
 
 
