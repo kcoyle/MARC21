@@ -5,15 +5,15 @@ There are some efforts that claim to be post-MARC bibliographic record formats, 
 
 # Contents
 
-* [Introduction](MARC21/introduction.md)
-* [Basic Goals for a Metadata Format](MARC21/goals.md)
-* [What Catalogers Like About MARC](MARC21/catalogers.md)
-* [MARC21 and ISO2709 - differences](MARC21/MARC21&ISO2709.md)
-* [Statistics](MARC21/statistics.md)
+* [Introduction](introduction.md)
+* [Basic Goals for a Metadata Format](goals.md)
+* [What Catalogers Like About MARC](catalogers.md)
+* [MARC21 and ISO2709 - differences](MARC21%26ISO2709.md)
+* [Statistics](statistics.md)
 * Coded fixed field data
   * Redundancy
   * Different values for same term
-* [Indicators](MARC21/indicators.md)
+* [Indicators](indicators.md)
 * Variable fields
   * Inconsistent coding
   * Varying level of detail
